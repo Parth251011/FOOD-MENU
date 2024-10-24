@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Restaurant Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0B9444;
+            --secondary-color: #FF6B35;
+            --text-color: #333;
+            --background-color: #f9f9f9;
+            --card-background: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            padding: 20px;
+        }
+
+        .menu-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .menu-section {
+            background-color: var(--card-background);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .menu-category h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .menu-subcategory {
+            font-weight: 600;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+            font-size: 18px;
+        }
+
+        .food-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            transition: background-color 0.3s ease;
+        }
+
+        .food-item:hover {
+            background-color: #f0f0f0;
+        }
+
+        .food-item-name {
+            flex-grow: 1;
+            font-weight: 400;
+        }
+
+        .food-item-price {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .food-item-description {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .best-seller {
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .chef-signature {
+            color: #4B0082;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .menu-section {
+                padding: 15px;
+            }
+
+            .menu-category h2 {
+                font-size: 20px;
+            }
+
+            .menu-subcategory {
+                font-size: 16px;
+            }
+
+            .food-item {
+                flex-direction: column;
+            }
+
+            .food-item-price {
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="menu-section">
+            <div class="menu-category">
+                <h2>STARTERS</h2>
+                <div class="menu-subcategory">VEG</div>
+                <div class="food-item">
+                    <span class="food-item-name">PANEER CHILLI</span>
+                    <span class="food-item-price">₹140</span>
+                </div>
+                <div class="food-item-description">(15 pieces)</div>
+                <div class="food-item">
+                    <span class="food-item-name">MUSHROOM CHILLI</span>
+                    <span class="food-item-price">₹140</span>
+                </div>
+                <div class="food-item">
+                    <span class="food-item-name">CORN SALT AND PEPPER</span>
+                    <span class="food-item-price">₹100</span>
+                </div>
+                <div class="food-item">
+                    <span class="food-item-name">MANCHURIAN</span>
+                    <span class="food-item-price">₹40</span>
+                </div>
+
+                <div class="menu-subcategory">NON VEG</div>
+                <div class="food-item">
+                    <span class="food-item-name">FRIED CHICKEN</span>
+                    <span class="food-item-price">₹200</span>
+                </div>
+                <div class="food-item-description">(10 pieces)</div>
+                <div class="food-item">
+                    <span class="food-item-name">CHICKEN LOLLIPOP</span>
+                    <span class="food-item-price">₹150</span>
+                </div>
+                <div class="food-item-description">(5 pieces)</div>
+                <div class="food-item">
+                    <span class="food-item-name">CHICKEN CHILLI</span>
+                    <span class="food-item-price">₹120</span>
+                </div>
+                <div class="food-item-description">(12 pieces, boneless)</div>
+                <div class="food-item">
+                    <span class="food-item-name">CHICKEN PEPPER FRY</span>
+                    <span class="food-item-price">₹180</span>
+                </div>
+                <div class="food-item-description">(18 pieces, boneless)</div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <div class="menu-category">
+                <h2>RICE & NOODLES</h2>
+                <div class="food-item">
+                    <span class="food-item-name">VEG FRIED RICE</span>
+                    <span class="food-item-price">₹80</span>
+                </div>
+                <div class="food-item">
+                    <span class="food-item-name">EGG FRIED RICE</span>
+                    <span class="food-item-price">₹80</span>
+                </div>
+                <div class="food-item">
+                    <span class="food-item-name">CHICKEN FRIED RICE</span>
+                    <span class="food-item-price">₹100</span>
+                </div>
+                <div class="food-item">
+                    <span class="food-item-name">VEG NOODLES</span>
+                    <span class="food-item-price">₹40</span>
+                </div>
+                <div class="food-item">
+                    <span class="food-item-name">EGG NOODLES</span>
+                    <span class="food-item-price">₹60</span>
+                </div>
+                <div class="food-item">
+                    <span class="food-item-name">CHICKEN NOODLES</span>
+                    <span class="food-item-price">₹100</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <div class="menu-category">
+                <h2>MAIN COURSE</h2>
+                <div class="menu-subcategory">BIRYANI & RICE</div>
+                <div class="food-item">
+                    <span class="food-item-name">CHICKEN BIRYANI</span>
+                    <span class="food-item-price">₹100</span>
+                </div>
+                <div class="food-item-description">(2 pieces chicken, 1 egg)</div>
+                <div class="food-item">
+                    <span class="food-item-name">EGG BIRYANI</span>
+                    <span class="food-item-price">₹80</span>
+                </div>
+                <div class="food-item-description">(2 pieces egg)</div>
+                <div class="food-item">
+                    <span class="food-item-name">VEG BIRYANI</span>
+                    <span class="food-item-price">₹100</span>
+                </div>
+                <div class="food-item">
+                    <span class="food-item-name">MUSHROOM BIRYANI</span>
+                    <span class="food-item-price">₹150</span>
+                </div>
+                <div class="food-item">
+                    <span class="food-item-name">PANEER BIRYANI</span>
+                    <span class="food-item-price">₹180</span>
+                </div>
+                <div class="food-item-description">(14 pieces paneer)</div>
+                <div class="food-item">
+                    <span class="food-item-name">JEERA RICE</span>
+                    <span class="food-item-price">₹80</span>
+                </div>
+                <div class="food-item">
+                    <span class="food-item-name">STEAM RICE</span>
+                    <span class="food-item-price">₹70</span>
+                </div>
+
+                <div class="menu-subcategory">ADD ON</div>
+                <div class="food-item">
+                    <span class="food-item-name">EXTRA CHICKEN</span>
+                    <span class="food-item-price">₹30</span>
+                </div>
+                <div class="food-item">
+                    <span class="food-item-name">EXTRA EGG</span>
+                    <span class="food-item-price">₹10</span>
+                </div>
+
+                <div class="menu-subcategory">VEG IN GRAVY</div>
+                <div class="food-item">
+                    <span class="food-item-name">PANEER HANDI (FULL)</span>
+                    <span class="food-item-price">₹180</span>
+                </div>
+                <div class="food-item-description">(18 pieces paneer) <span class="best-seller">BEST SELLER</span></div>
+                <div class="food-item">
+                    <span class="food-item-name">PANEER HANDI (HALF)</span>
+                    <span class="food-item-price">₹100</span>
+                </div>
+                <div class="food-item-description">(9 pieces paneer) <span class="best-seller">BEST SELLER</span></div>
+                <div class="food-item">
+                    <span class="food-item-name">PANEER MASALA</span>
+                    <span class="food-item-price">₹150</span>
+                </div>
+                <div class="food-item-description">(12 pieces paneer)</div>
+                <div class="food-item">
+                    <span class="food-item-name">KADAI PANEER</span>
+                    <span class="food-item-price">₹150</span>
+                </div>
+                <div class="food-item-description">(12 pieces paneer)</div>
+                <div class="food-item">
+                    <span class="food-item-name">PANEER BHARTA</span>
+                    <span class="food-item-price">₹150</span>
+                </div>
+                <div class="food-item">
+                    <span class="food-item-name">MUSHROOM MASALA</span>
+                    <span class="food-item-price">₹150</span>
+                </div>
+                <div class="food-item">
+                    <span class="food-item-name">MUSHROOM HANDI (FULL)</span>
+                    <span class="food-item-price">₹180</span>
+                </div>
+                <div class="food-item">
+                    <span class="food-item-name">MUSHROOM HANDI (HALF)</span>
+                    <span class="food-item-price">₹100</span>
+                </div>
+                <div class="food-item">
+                    <span class="food-item-name">MIX VEG</span>
+                    <span class="food-item-price">₹150</span>
+                </div>
+                <div class="food-item-description">(ADD PANEER)</div>
+                <div class="food-item">
+                    <span class="food-item-name">DAL FRY</span>
+                    <span class="food-item-price">₹70</span>
+                </div>
+
+                <div class="menu-subcategory">NON-VEG IN GRAVY</div>
+                <div class="food-item">
+                    <span class="food-item-name">CHICKEN HANDI (FULL)</span>
+                    <span class="food-item-price">₹180</span>
+                </div>
+                <div class="food-item-description">(6 pieces) <span class="best-seller">BEST SELLER</span></div>
+                <div class="food-item">
+                    <span class="food-item-name">CHICKEN HANDI (HALF)</span>
+                    <span class="food-item-price">₹100</span>
+                </div>
+                <div class="food-item-description">(3 pieces) <span class="best-seller">BEST SELLER</span></div>
+                <div class="food-item">
+                    <span class="food-item-name">MURG ANDA MASALA</span>
+                    <span class="food-item-price">₹150</span>
+                </div>
+                <div class="food-item-description">(4 pieces chicken, 1 egg) <span class="chef-signature">CHEF SIGNATURE</span></div>
+                <div class="food-item">
+                    <span class="food-item-name">KADAI CHICKEN</span>
+                    <span class="food-item-price">₹150</span>
+                </div>
+                <div class="food-item-description">(5 pieces)</div>
+                <div class="food-item">
+                    <span class="food-item-name">CHICKEN MASALA</span>
+                    <span class="food-item-price">₹150</span>
+                </div>
+                <div class="food-item-description">(5 pieces)</div>
+                <div class="food-item">
+                    <span class="food-item-name">CHICKEN TIKKA MASALA</span>
+                    <span class="food-item-price">₹160</span>
+                </div>
+                <div class="food-item-description">(5 pieces, boneless)</div>
+                <div class="food-item">
+                    <span class="food-item-name">ANDA MASALA</span>
+                    <span  class="food-item-price">₹50</span>
+                </div>
+                <div class="food-item-description">(2 pieces egg)</div>
+                <div class="food-item">
+                    <span class="food-item-name">EGG BHURJI</span>
+                    <span class="food-item-price">₹40</span>
+                </div>
+                <div class="food-item-description">(2 pieces egg)</div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <div class="menu-category">
+                <h2>BREAD</h2>
+                <div class="food-item">
+                    <span class="food-item-name">LACCHA PARATHA</span>
+                    <span class="food-item-price">₹15</span>
+                </div>
+                <div class="food-item">
+                    <span class="food-item-name">BROWN PARATHA</span>
+                    <span class="food-item-price">₹15</span>
+                </div>
+                <div class="food-item">
+                    <span class="food-item-name">TAWA ROTI</span>
+                    <span class="food-item-price">₹30</span>
+                </div>
+                <div class="food-item-description">(4 pieces)</div>
+                <div class="food-item">
+                    <span class="food-item-name">BUTTER ROTI</span>
+                    <span class="food-item-price">₹10</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <div class="menu-category">
+                <h2>DRINKS</h2>
+                <div class="food-item">
+                    <span class="food-item-name">WATER</span>
+                    <span class="food-item-price">₹20</span>
+                </div>
+                <div class="food-item">
+                    <span class="food-item-name">MASALA COKE</span>
+                    <span class="food-item-price">₹30</span>
+                </div>
+                <div class="food-item">
+                    <span class="food-item-name">SIKANJI</span>
+                    <span class="food-item-price">₹30</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
